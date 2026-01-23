@@ -1,7 +1,7 @@
 // Insertion Sort 
-class InsertionSort {
+class Main {
     public static void main(String[] args) {
-        int[] arr = {5, 3, 4, 1, 2};
+        int[] arr = {86,92,43,19,11};
 
         for (int i = 1; i < arr.length; i++) {
             int temp = arr[i];  
@@ -12,6 +12,12 @@ class InsertionSort {
                 j--;
             }
             arr[j + 1] = temp;
+            
+            System.out.print("After pass " + i + ": ");
+            for (int k = 0; k < arr.length; k++) {
+                System.out.print(arr[k] + " ");
+            }
+            System.out.println();
         }
         System.out.println("Sorted Array :");
         for (int i = 0; i < arr.length; i++) {
