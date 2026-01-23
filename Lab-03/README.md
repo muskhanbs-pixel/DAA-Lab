@@ -1,4 +1,4 @@
-# Lab 02 – Insertion Sort
+# Lab 03 – Insertion Sort
 
 ## Aim
 To implement Insertion Sort algorithm using Java.
