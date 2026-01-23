@@ -1,10 +1,17 @@
-# Design and Analysis of Algorithms Lab
+# Lab 01 – Selection Sort
 
-This repository contains DAA lab programs implemented in Java.
+## Aim
+To implement Selection Sort algorithm using Java.
 
-## Folder Structure
-- Lab-01 : Selection Sort
-- Lab-02 : (To be added)
+## Description
+Selection Sort works by repeatedly selecting the minimum element from the unsorted
+part of the array and placing it at the beginning.
+
+## Program
+- SelectionSort.java
+
+## Output
+The given array is sorted in ascending order.
 
 ## Author
 Muskhan B.S.
