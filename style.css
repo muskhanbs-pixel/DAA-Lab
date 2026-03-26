@@ -1,0 +1,257 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #eef0f5;
+  color: #1a1a2e;
+  padding: 16px;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a2e;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo { font-size: 28px; }
+
+h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 11px;
+  color: #8080aa;
+  margin-top: 2px;
+}
+
+.header-badges {
+  display: flex;
+  gap: 8px;
+}
+
+.badge {
+  background: #2a2a4a;
+  color: #a0a0cc;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  border: 1px solid #3a3a6a;
+}
+
+/* LAYOUT */
+.layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* CARDS */
+.card {
+  background: #ffffff;
+  border: 1px solid #dde0ea;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.card-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #9090b0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+/* TRAIN BUTTONS */
+.train-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.train-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #4a4a6a;
+  border: 1.5px solid transparent;
+  background: #f5f6fa;
+  transition: all 0.15s;
+}
+
+.train-btn:hover {
+  background: #eef0f8;
+  border-color: #c0c4dc;
+}
+
+.train-btn.active {
+  background: #f0f1ff;
+  border-color: #5a5aff;
+  color: #1a1a2e;
+  font-weight: 600;
+}
+
+.train-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ALGO BUTTONS */
+.algo-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.algo-btn {
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  background: #f5f6fa;
+  transition: all 0.15s;
+}
+
+.algo-btn:hover {
+  background: #eef0f8;
+  border-color: #c0c4dc;
+}
+
+.algo-btn.active {
+  background: #f0f1ff;
+  border-color: #5a5aff;
+}
+
+.algo-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.algo-meta {
+  font-size: 11px;
+  color: #9090b0;
+  margin-top: 2px;
+}
+
+/* CONTROLS */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-run, .btn-all, .btn-reset {
+  width: 100%;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-run {
+  background: #1a1a2e;
+  color: white;
+}
+
+.btn-run:hover { background: #2a2a4e; }
+
+.btn-all {
+  background: #1D9E75;
+  color: white;
+}
+
+.btn-all:hover { background: #178a63; }
+
+.btn-reset {
+  background: #f0f1f5;
+  color: #6060a0;
+}
+
+.btn-reset:hover { background: #e0e2ea; }
+
+/* RESULT CARD */
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.result-row:last-child { border-bottom: none; }
+.result-label { color: #9090b0; }
+.result-value { font-weight: 600; color: #1a1a2e; }
+.result-path { font-weight: 600; color: #5a5aff; }
+
+/* CANVAS */
+#railwayCanvas {
+  width: 100%;
+  height: 400px;
+  display: block;
+  border-radius: 8px;
+  background: #f8f9fc;
+}
+
+/* OUTPUT LOG */
+.output-log {
+  font-size: 13px;
+  color: #6060a0;
+  line-height: 1.8;
+}
+
+.log-row {
+  padding: 5px 0;
+  border-bottom: 1px solid #f0f0f5;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.log-row:last-child { border-bottom: none; }
+.log-train { font-weight: 700; }
+.log-path { color: #1a1a2e; }
+.log-cost { color: #1D9E75; font-weight: 600; }
