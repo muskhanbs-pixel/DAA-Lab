@@ -1,0 +1,52 @@
+import java.util.*;
+
+public class ClosestNumbers {
+
+    public static void closestNumbers(int[] arr) {
+        // Step 1: Sort the array
+        Arrays.sort(arr);
+
+        // Step 2: Find minimum difference
+        int minDiff = Integer.MAX_VALUE;
+
+        for (int i = 1; i < arr.length; i++) {
+            int diff = arr[i] - arr[i - 1];
+            if (diff < minDiff) {
+                minDiff = diff;
+            }
+        }
+
+        // Step 3: Print pairs with minimum difference
+        for (int i = 1; i < arr.length; i++) {
+            int diff = arr[i] - arr[i - 1];
+            if (diff == minDiff) {
+                System.out.print(arr[i - 1] + " " + arr[i] + " ");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt(); // size of array
+        int[] arr = new int[n];
+
+        // Input elements
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Call function
+        closestNumbers(arr);
+
+        sc.close();
+    }
+}
+OUTPUT
+Input (stdin)
+10
+-20 -3916237 -357920 -3620601 7374819 -7330761 30 6246457 -6461594 266854
+Your Output (stdout)
+-20 30 
+Expected Output
+-20 30
